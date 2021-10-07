@@ -63,6 +63,7 @@ public class Controller : MonoBehaviour
         _Back.GetComponent<Button>().onClick.AddListener(GetBack);
     }
 
+    #region General Configuration
     private void GetStartRotate()
     {
         audio.Play();
@@ -89,7 +90,9 @@ public class Controller : MonoBehaviour
     {
         SceneManager.LoadScene("Menu");
     }
+    #endregion
 
+    #region Rotasi Configuration
     private void Rotasi_Satu()
     {
         TitikRotasi[0].transform.Rotate(0, Rotasi_Sperma1, 0);
@@ -115,4 +118,6 @@ public class Controller : MonoBehaviour
         for(int i = 0; i<Sperma.Length; i++)
             Sperma[i].transform.Rotate(0, 0, rotasi_Sperma);
     }
+
+    #endregion
 }
